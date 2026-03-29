@@ -165,8 +165,8 @@ export default function DashboardPage() {
               <h2 className="mb-4 text-sm font-medium text-zinc-500">
                 Events by type
               </h2>
-              <div className="h-64 w-full min-w-0">
-                <ResponsiveContainer width="100%" height="100%">
+              <div className="h-64 w-full min-w-0 shrink-0">
+                <ResponsiveContainer width="100%" height={256}>
                   <BarChart data={chartData} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
                     <CartesianGrid strokeDasharray="3 3" className="stroke-zinc-200 dark:stroke-zinc-800" />
                     <XAxis
