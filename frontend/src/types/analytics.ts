@@ -34,3 +34,10 @@ export type MeResponse = {
     email: string;
   };
 };
+
+/** Page views in rolling window — proxy for “live” traffic (backend + Redis cache). */
+export type LiveVisitorsResponse = {
+  windowMinutes: number;
+  pageViewsInWindow: number;
+  computedAt: string;
+};
