@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { EventType } from '../../generated/prisma/client';
+import { EventType } from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
 
 function startOfUtcDay(d: Date): Date {

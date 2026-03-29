@@ -1,7 +1,6 @@
 import { PrismaPg } from '@prisma/adapter-pg';
 import { Pool } from 'pg';
-import { Prisma, PrismaClient } from '../generated/prisma/client';
-import { EventType } from '../generated/prisma/enums';
+import { EventType, Prisma, PrismaClient } from '@prisma/client';
 
 const STORE_ID = process.env.SEED_STORE_ID ?? 'seed_store_demo_001';
 

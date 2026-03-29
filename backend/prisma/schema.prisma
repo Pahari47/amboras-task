@@ -1,6 +1,5 @@
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -54,3 +53,4 @@ model StoreEvent {
   @@index([storeId, eventType, timestamp])
   @@index([storeId, eventType, productId])
 }
+
