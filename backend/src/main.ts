@@ -13,9 +13,13 @@ async function bootstrap() {
       cookie: { maxAge: 24 * 60 * 60 * 1000 },
     }),
   );
-  const frontendUrl = process.env.FRONTEND_URL ?? 'http://localhost:3001';
+  const raw = process.env.FRONTEND_URL ?? 'http://localhost:3001';
+  const origins = raw
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean);
   app.enableCors({
-    origin: frontendUrl,
+    origin: origins.length <= 1 ? (origins[0] ?? 'http://localhost:3001') : origins,
     credentials: true,
   });
   app.setGlobalPrefix('api/v1');

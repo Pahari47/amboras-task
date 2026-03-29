@@ -23,4 +23,9 @@ export class AnalyticsController {
   getRecentActivity(@CurrentUser() user: RequestUser) {
     return this.analyticsService.getRecentActivity(user.storeId);
   }
+
+  @Get('live-visitors')
+  getLiveVisitors(@CurrentUser() user: RequestUser) {
+    return this.analyticsService.getLiveVisitors(user.storeId);
+  }
 }
