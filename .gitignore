@@ -1,3 +1,5 @@
 node_modules
 .env
 .cursorrules
+generated/
+dist/
