@@ -16,7 +16,7 @@ I built a small full-stack analytics app for multi-tenant store events: NestJS +
 **1. Clone and install**
 
 ```bash
-git clone <your-repo-url>
+git clone <repo-url>
 cd amboras-task
 ```
 
